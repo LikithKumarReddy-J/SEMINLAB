@@ -1,0 +1,322 @@
+<div id="module-discover" class="module">
+<!-- =================================================
+     EVENTS
+================================================= -->
+
+<section
+class="page"
+id="events">
+
+<div class="page-title">
+
+<h2>
+📍 Around Me
+</h2>
+
+<p>
+Find events, activities and meetups around a place.
+</p>
+
+</div>
+
+
+<div class="event-search">
+
+<h3>
+Find Events
+</h3>
+
+<p>
+Search a city or area to discover what's happening.
+</p>
+
+
+<div class="search-row">
+
+<input
+id="placeInput"
+placeholder="Try Vijayawada, Hyderabad, Chennai...">
+
+<button
+onclick="findEvents()">
+
+Find Events
+
+</button>
+
+</div>
+
+
+<div class="location-suggestions">
+
+<button
+class="location-btn"
+onclick="quickLocation('Vijayawada')">
+
+Vijayawada
+
+</button>
+
+<button
+class="location-btn"
+onclick="quickLocation('Guntur')">
+
+Guntur
+
+</button>
+
+<button
+class="location-btn"
+onclick="quickLocation('Hyderabad')">
+
+Hyderabad
+
+</button>
+
+<button
+class="location-btn"
+onclick="quickLocation('Chennai')">
+
+Chennai
+
+</button>
+
+<button
+class="location-btn"
+onclick="quickLocation('Bengaluru')">
+
+Bengaluru
+
+</button>
+
+</div>
+
+</div>
+
+
+<div id="eventTitle">
+</div>
+
+
+<div
+class="event-grid"
+id="eventGrid">
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     CIRCLES
+================================================= -->
+
+<section
+class="page"
+id="circles">
+
+<div class="page-title">
+
+<h2>
+⭕ Circles
+</h2>
+
+<p>
+Create smaller communities for people you know.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<input
+id="circleName"
+placeholder="Example: College Friends"
+style="
+width:100%;
+padding:12px;
+border:1px solid #ddd;
+border-radius:7px;
+">
+
+
+<button
+class="main-btn"
+onclick="createCircle()">
+
+Create Circle
+
+</button>
+
+</div>
+
+
+<div
+class="circle-grid"
+id="circleList">
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     EVENT DETAILS MODAL
+===================================================== -->
+
+<div
+class="modal"
+id="eventModal">
+
+<div class="modal-box">
+
+<button
+class="close"
+onclick="closeModal('eventModal')">
+
+×
+
+</button>
+
+<div id="eventModalContent">
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     REGISTRATION MODAL
+===================================================== -->
+
+<div
+class="modal"
+id="registerModal">
+
+<div class="modal-box">
+
+<button
+class="close"
+onclick="closeModal('registerModal')">
+
+×
+
+</button>
+
+
+<h2>
+🎫 Event Registration
+</h2>
+
+<p
+style="color:#777"
+id="registerEventName">
+
+</p>
+
+
+<div class="form-group">
+
+<label>
+Full Name
+</label>
+
+<input
+id="regName"
+placeholder="Enter your full name">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Mobile Number
+</label>
+
+<input
+id="regMobile"
+placeholder="10 digit mobile number">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Email
+</label>
+
+<input
+id="regEmail"
+placeholder="Enter email">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+College / ID
+</label>
+
+<input
+id="regCollege"
+placeholder="College name or ID">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Number of People
+</label>
+
+<select id="regPeople">
+
+<option value="1">
+1
+</option>
+
+<option value="2">
+2
+</option>
+
+<option value="3">
+3
+</option>
+
+<option value="4">
+4
+</option>
+
+<option value="5">
+5
+</option>
+
+</select>
+
+</div>
+
+
+<button
+class="main-btn"
+onclick="registerEvent()">
+
+Confirm Registration
+
+</button>
+
+
+<div
+id="registrationSuccess">
+
+</div>
+
+</div>
+
+</div>

@@ -1,0 +1,345 @@
+<div id="module-social" class="module">
+<!-- =================================================
+     HOME
+================================================= -->
+
+<section
+class="page active"
+id="home">
+
+<div class="card welcome-card">
+
+<h2>
+Welcome to tru 👋
+</h2>
+
+<p>
+Discover people, events and conversations around you.
+</p>
+
+
+<div class="quick-actions">
+
+<div
+class="quick"
+onclick="openPage('events')">
+
+📍 Find Events
+
+</div>
+
+<div
+class="quick"
+onclick="openPage('friends')">
+
+👥 Find Friends
+
+</div>
+
+<div
+class="quick"
+onclick="openPage('create')">
+
+📝 Create Post
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="page-title">
+
+<h2>
+Community Feed
+</h2>
+
+<p>
+See what people on tru are sharing.
+</p>
+
+</div>
+
+
+<div id="feed">
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     CREATE POST
+================================================= -->
+
+<section
+class="page"
+id="create">
+
+<div class="page-title">
+
+<h2>
+Create a Post
+</h2>
+
+<p>
+Share text, photos and updates with your friends.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<textarea
+class="post-textarea"
+id="postText"
+placeholder="What's happening?"></textarea>
+
+
+<div class="image-upload">
+
+📷 Add an image
+
+<br><br>
+
+<input
+type="file"
+id="postImage"
+accept="image/*"
+onchange="previewImage(event)">
+
+
+<img
+id="imagePreview"
+class="preview">
+
+</div>
+
+
+<button
+class="main-btn"
+onclick="createPost()">
+
+Publish Post
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     FRIENDS
+================================================= -->
+
+<section
+class="page"
+id="friends">
+
+<div class="page-title">
+
+<h2>
+👥 Friends
+</h2>
+
+<p>
+Meet people and build your community.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+📩 Friend Requests
+</h3>
+
+<br>
+
+<div id="requestsList">
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+💡 People You May Know
+</h3>
+
+<p
+style="color:#777;margin:7px 0 15px">
+
+Suggestions from the tru community.
+
+</p>
+
+
+<div
+class="friend-grid"
+id="suggestionList">
+
+</div>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+❤️ My Friends
+</h3>
+
+<br>
+
+<div
+class="friend-grid"
+id="friendList">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     CHAT
+================================================= -->
+
+<section
+class="page"
+id="chat">
+
+<div class="page-title">
+
+<h2>
+💬 Messages
+</h2>
+
+<p>
+Chat privately with your friends.
+</p>
+
+</div>
+
+
+<div class="chat-layout">
+
+
+<div
+class="chat-users"
+id="chatUsers">
+
+</div>
+
+
+<div class="chat-main">
+
+
+<div
+class="chat-header"
+id="chatHeader">
+
+Select a friend to start chatting
+
+</div>
+
+
+<div
+class="chat-messages"
+id="chatMessages">
+
+<div
+style="
+text-align:center;
+color:#999;
+padding:40px;
+">
+
+Your conversations will appear here.
+
+</div>
+
+</div>
+
+
+<div class="chat-input">
+
+<input
+id="chatInput"
+placeholder="Type a message..."
+onkeydown="
+if(event.key==='Enter')
+sendChat()
+">
+
+<button
+onclick="sendChat()">
+
+Send
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =================================================
+     SEARCH
+================================================= -->
+
+<section
+class="page"
+id="search">
+
+<div class="page-title">
+
+<h2>
+🔎 Search
+</h2>
+
+<p>
+Search for people and posts.
+</p>
+
+</div>
+
+
+<div class="search-row">
+
+<input
+id="searchInput"
+placeholder="Search people or posts...">
+
+<button
+onclick="searchContent()">
+
+Search
+
+</button>
+
+</div>
+
+
+<div id="searchResults">
+</div>
+
+</section>
+
+</div>

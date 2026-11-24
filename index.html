@@ -8,7 +8,8 @@
 <body>
 
     <div class="container" id="auth">
-        <h1>Likith</h1>
+        <h1>KL College</h1>
+        <img src="logo kl.png" height="100" width="100" >
         <p></p>
 
         <div class="tabs">
@@ -40,12 +41,12 @@
     </div>
     <div id="dashboard" class="hidden">
         <header>
-            <h1>LIKITH College </h1>
+            <h1>KL College </h1>
             <button onclick="logout()">Logout</button>
         </header>
 
         <div class="welcome">
-            <h2>Welcome, <span id="studentName"></span>!</h2>
+            <h2>Welcome<span id="studentName"></span>!</h2>
             <p>Explore our college departments</p>
         </div>
 
@@ -67,6 +68,15 @@
                 <p>EEE</p>
             </div>
         </div>
+        <div class="card" onclick="showDepartment('IT')">
+                <h3>Information Technology</h3>
+                <p>IT</p>
+            </div>
+        </div>
+         <div class="card" onclick="showDepartment('CIVIL')">
+                <h3>Civil Engineering</h3>
+                <p>CIVIL</p>
+            </div>
 
         <div id="departmentDetails" class="details hidden">
             <h2 id="deptTitle"></h2>
@@ -74,6 +84,8 @@
             <button onclick="closeDepartment()">Close</button>
         </div>
     </div>
+    
+
 
     <script src="script.js"></script>
 </body>

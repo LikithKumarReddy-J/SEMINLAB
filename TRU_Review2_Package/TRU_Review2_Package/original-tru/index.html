@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tru - Connect. Discover. Share.</title>
+<link rel="stylesheet" href="common/common.css">
+<link rel="stylesheet" href="login/login.css">
+<link rel="stylesheet" href="social/social.css">
+<link rel="stylesheet" href="discover/discover.css">
+<link rel="stylesheet" href="admin/admin.css">
+</head>
+<body>
+
+<div id="authPage"></div>
+
+<div class="app" id="app">
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="brand">
+tru<span>.</span>
+</div>
+
+<div class="nav-right">
+
+<div
+class="nav-avatar"
+id="navAvatar">
+
+U
+
+</div>
+
+<span id="navName">
+</span>
+
+<button
+class="logout"
+onclick="logout()">
+
+Logout
+
+</button>
+
+</div>
+
+</nav>
+
+
+
+<div class="layout">
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+<button
+class="menu active"
+onclick="openPage('home',this)">
+
+🏠 Home
+
+</button>
+
+
+<button
+class="menu"
+onclick="openPage('create',this)">
+
+✏️ Create Post
+
+</button>
+
+
+<button
+class="menu"
+onclick="openPage('friends',this)">
+
+👥 Friends
+
+</button>
+
+
+<button
+class="menu"
+onclick="openPage('chat',this)">
+
+💬 Chat
+
+</button>
+
+
+<button
+class="menu"
+onclick="openPage('search',this)">
+
+🔎 Search
+
+</button>
+
+
+<button
+class="menu"
+onclick="openPage('events',this)">
+
+📍 Around Me
+
+</button>
+
+
+<button
+class="menu"
+onclick="openPage('circles',this)">
+
+⭕ Circles
+
+</button>
+
+
+<button
+class="menu"
+onclick="openPage('profile',this)">
+
+👤 Profile
+
+</button>
+
+
+<button
+class="menu"
+id="adminMenu"
+onclick="openPage('admin',this)"
+style="display:none">
+
+⚙️ Admin
+
+</button>
+
+
+</aside>
+
+<div id="moduleHost"></div>
+<div id="toast" class="toast"></div>
+</div>
+
+<script src="core.js"></script>
+<script src="login/login.js"></script>
+<script src="social/social.js"></script>
+<script src="discover/discover.js"></script>
+<script src="admin/admin.js"></script>
+<script src="runner.js"></script>
+</body>
+</html>
